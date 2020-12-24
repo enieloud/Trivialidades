@@ -11,7 +11,7 @@ class GameTypeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
     }
 
     // MARK: - Table view data source

@@ -39,10 +39,9 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
         return cell
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        answers.rowHeight = 24
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -22,10 +22,10 @@ Ejercicio en iOS. Implementa un trivia basado en [Open Trivia Database](https://
 
 ![Difficulty](/images/Difficulty.png)
 
-![FinalScore](/images/FinalScore.png)
+![QuestionType](/images/QuestionType.png)
 
 ![GameViewController](/images/GameViewController.png)
 
 ![GameViewControllerAnswer](/images/GameViewControllerAnswer.png)
 
-![QuestionType](/images/QuestionType.png)
+![FinalScore](/images/FinalScore.png)

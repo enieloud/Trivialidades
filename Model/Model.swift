@@ -3,6 +3,15 @@ import Foundation
 // MARK: - Categories
 class TriviaCategories: Codable {
     let triviaCategories: [TriviaCategory]
+    
+    func findById(_ id: Int)->String {
+        for tc in triviaCategories {
+            if tc.id == id {
+                return tc.name
+            }
+        }
+        return ""
+    }
 
     enum CodingKeys: String, CodingKey {
         case triviaCategories = "trivia_categories"

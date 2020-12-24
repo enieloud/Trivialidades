@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="339.13043478260875" y="796.875"/>
         </scene>
-        <!--Game Type Table View Controller-->
+        <!--Question Type-->
         <scene sceneID="3J2-Qv-boV">
             <objects>
                 <tableViewController id="sxr-Rc-M9R" customClass="GameTypeTableViewController" customModule="Trivialidades" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +122,7 @@
                             <outlet property="delegate" destination="sxr-Rc-M9R" id="ilp-Zx-vSc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="28v-Ja-zf5"/>
+                    <navigationItem key="navigationItem" title="Question Type" id="28v-Ja-zf5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wd4-Jp-fpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,17 +145,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was the title of the first Bond movie, released in 1962?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3V-Cc-s6k">
-                                <rect key="frame" x="20" y="116.5" width="385" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="X3v-mu-rbM"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What was the title of the first Bond movie, released in 1962?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="i3V-Cc-s6k">
+                                <rect key="frame" x="20" y="116.5" width="385" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tgK-8o-1rc">
-                                <rect key="frame" x="20" y="205.5" width="374" height="562.5"/>
+                                <rect key="frame" x="20" y="160.5" width="374" height="607.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TriviaAnswerViewCell" textLabel="Nfj-vI-Dyp" style="IBUITableViewCellStyleDefault" id="2Gd-rs-eRB">

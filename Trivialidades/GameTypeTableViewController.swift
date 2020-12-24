@@ -26,7 +26,7 @@ class GameTypeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameTypeViewCell", for: indexPath)
-        cell.textLabel?.text = QuestionType.allCases[indexPath.row].rawValue
+        cell.textLabel?.text = questionTypedescription( QuestionType.allCases[indexPath.row])
         return cell
     }
     
@@ -44,8 +44,9 @@ class GameTypeTableViewController: UITableViewController {
                     }
                 }
             } else {
+                let text = appDelegate.game.gameDescription()
                 DispatchQueue.main.async { [unowned self] in
-                    let alert = UIAlertController(title: "Error", message: "You can't combine Hard level with Yes/No Questions!", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Error", message: "The combination of \n\n \(text) brought no questions!", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }

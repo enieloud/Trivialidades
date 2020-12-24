@@ -115,6 +115,30 @@ class Game {
             }
         }
     }
+    
+    func currentCategDescription() -> String {
+        if let c = self.categ {
+            return c.findById(self.categoryId)
+        } else {
+            return ""
+        }
+    }
+    
+    func gameDescription() -> String {
+        return "\"\(self.currentCategDescription())\", \n \"\(difficultyDescription(self.difficulty)) level\", \n \"\(questionTypedescription(self.type))\"\n\n"
+    }
+    
+    func readCategories(completion completionHandler: @escaping (Bool)->Void) {
+        readTriviaCategories( completion: { (categ: TriviaCategories?) in
+            self.categ = categ
+            if self.categ != nil {
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+            }
+        })
+    }
+
     var difficulty: Difficulty = .easy
     var type: QuestionType = .multiple
     var amount: Int = 10
@@ -123,6 +147,7 @@ class Game {
     var questionsAndAnswers: QuestionsAndAnswers!
     var score: Int = 0
     var currentStep: Int = 0
+    var categ: TriviaCategories?
 }
 
 // MARK: - QuestionsAndAnswers
@@ -160,6 +185,18 @@ enum Difficulty: String, CaseIterable, Codable {
 enum QuestionType: String, CaseIterable, Codable {
     case boolean = "boolean"
     case multiple = "multiple"
+}
+
+func questionTypedescription(_ qt: QuestionType) -> String {
+    if qt == .boolean {
+        return "True or False question"
+    } else {
+        return "Multiple Choice"
+    }
+}
+
+func difficultyDescription(_ df: Difficulty) -> String {
+    return df.rawValue.capitalizingFirstLetter()
 }
 
 func readGame(

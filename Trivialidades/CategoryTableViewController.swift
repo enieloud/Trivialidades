@@ -9,16 +9,22 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
 
-    var categ: TriviaCategories?
     override func viewDidLoad() {
         super.viewDidLoad()
          self.clearsSelectionOnViewWillAppear = false
     }
+    
     override func viewDidAppear(_ animated: Bool) {
-        readTriviaCategories { (categories: TriviaCategories?) in
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.game.readCategories { (success: Bool) in
             DispatchQueue.main.async { [unowned self] in
-                if let c = categories {
-                    self.categ = c
+                if !success {
+                    DispatchQueue.main.async { [unowned self] in
+                        let alert = UIAlertController(title: "Error", message: "Please check your Internet connection!", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                } else {
                     self.tableView.reloadData()
                 }
             }
@@ -28,7 +34,8 @@ class CategoryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if let _ = categ {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if let _ = appDelegate.game.categ {
             return 1
         } else {
             return 0
@@ -36,7 +43,8 @@ class CategoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let c = categ {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if let c = appDelegate.game.categ  {
             return c.triviaCategories.count
         } else {
             return 0
@@ -44,7 +52,8 @@ class CategoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let c = categ {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if let c = appDelegate.game.categ  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "categoryViewCell", for: indexPath)
             cell.textLabel?.text = c.triviaCategories[indexPath.row].name
             return cell
@@ -57,7 +66,8 @@ class CategoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if let c = categ {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if let c = appDelegate.game.categ  {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.game.categoryId = c.triviaCategories[indexPath.row].id
         }

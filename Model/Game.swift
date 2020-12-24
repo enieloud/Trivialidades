@@ -150,43 +150,6 @@ class Game {
     var categ: TriviaCategories?
 }
 
-// MARK: - QuestionsAndAnswers
-class QuestionsAndAnswers: Codable {
-    let responseCode: Int
-    let results: [Result]
-
-    enum CodingKeys: String, CodingKey {
-        case responseCode = "response_code"
-        case results
-    }
-}
-
-// MARK: - Result
-struct Result: Codable {
-    let category: String
-    let type: QuestionType
-    let difficulty: Difficulty
-    let question, correctAnswer: String
-    let incorrectAnswers: [String]
-
-    enum CodingKeys: String, CodingKey {
-        case category, type, difficulty, question
-        case correctAnswer = "correct_answer"
-        case incorrectAnswers = "incorrect_answers"
-    }
-}
-
-enum Difficulty: String, CaseIterable, Codable {
-    case easy = "easy"
-    case hard = "hard"
-    case medium = "medium"
-}
-
-enum QuestionType: String, CaseIterable, Codable {
-    case boolean = "boolean"
-    case multiple = "multiple"
-}
-
 func questionTypedescription(_ qt: QuestionType) -> String {
     if qt == .boolean {
         return "True or False question"
@@ -197,29 +160,4 @@ func questionTypedescription(_ qt: QuestionType) -> String {
 
 func difficultyDescription(_ df: Difficulty) -> String {
     return df.rawValue.capitalizingFirstLetter()
-}
-
-func readGame(
-    difficulty: Difficulty,
-    type: QuestionType,
-    amount: Int,
-    categoryId: Int,
-    completion: @escaping (QuestionsAndAnswers?) -> Void)
-{
-    let urlStr = "https://opentdb.com/api.php?amount=\(amount)&category=\(categoryId)&difficulty=\(difficulty.rawValue)&type=\(type.rawValue)"
-    let url = URL(string: urlStr)!
-    
-    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-        guard let jsonData = data else {
-            completion(nil)
-            return
-        }
-        do {
-            let game: QuestionsAndAnswers = try JSONDecoder().decode(QuestionsAndAnswers.self, from: jsonData)
-            completion(game)
-        } catch {
-            completion(nil)
-        }
-    }
-    task.resume()
 }

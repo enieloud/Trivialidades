@@ -22,6 +22,7 @@
 		3667BADF2593F18800AC7632 /* DifficultyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BADE2593F18800AC7632 /* DifficultyTableViewController.swift */; };
 		3667BAE42593F96B00AC7632 /* GameTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BAE32593F96B00AC7632 /* GameTypeTableViewController.swift */; };
 		3667BAEC2594CB0C00AC7632 /* FinalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BAEB2594CB0C00AC7632 /* FinalScoreViewController.swift */; };
+		3667BAF12594D7B600AC7632 /* Readers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BAF02594D7B500AC7632 /* Readers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3667BADE2593F18800AC7632 /* DifficultyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyTableViewController.swift; sourceTree = "<group>"; };
 		3667BAE32593F96B00AC7632 /* GameTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeTableViewController.swift; sourceTree = "<group>"; };
 		3667BAEB2594CB0C00AC7632 /* FinalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScoreViewController.swift; sourceTree = "<group>"; };
+		3667BAF02594D7B500AC7632 /* Readers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				3667BAB62592EC3400AC7632 /* Model.swift */,
 				3667BACA2593772E00AC7632 /* Game.swift */,
+				3667BAF02594D7B500AC7632 /* Readers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3667BAD52593D4C600AC7632 /* String+HtmlEncoded.swift in Sources */,
+				3667BAF12594D7B600AC7632 /* Readers.swift in Sources */,
 				3667BADF2593F18800AC7632 /* DifficultyTableViewController.swift in Sources */,
 				3667BAEC2594CB0C00AC7632 /* FinalScoreViewController.swift in Sources */,
 				3667BACB2593772E00AC7632 /* Game.swift in Sources */,

@@ -24,22 +24,39 @@ struct TriviaCategory: Codable {
     let name: String
 }
 
-func readTriviaCategories(completion: @escaping (TriviaCategories?) -> Void)
-{
-    let url = URL(string: "https://opentdb.com/api_category.php")!
-    
-    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-        guard let jsonData = data else {
-            completion(nil)
-            return
-        }
-        do {
-            let triviaCategories = try JSONDecoder().decode(TriviaCategories.self, from: jsonData)
-            completion(triviaCategories)
-        } catch {
-            completion(nil)
-        }
+// MARK: - QuestionsAndAnswers
+class QuestionsAndAnswers: Codable {
+    let responseCode: Int
+    let results: [Result]
+
+    enum CodingKeys: String, CodingKey {
+        case responseCode = "response_code"
+        case results
     }
-    task.resume()
 }
 
+// MARK: - Result
+struct Result: Codable {
+    let category: String
+    let type: QuestionType
+    let difficulty: Difficulty
+    let question, correctAnswer: String
+    let incorrectAnswers: [String]
+
+    enum CodingKeys: String, CodingKey {
+        case category, type, difficulty, question
+        case correctAnswer = "correct_answer"
+        case incorrectAnswers = "incorrect_answers"
+    }
+}
+
+enum Difficulty: String, CaseIterable, Codable {
+    case easy = "easy"
+    case hard = "hard"
+    case medium = "medium"
+}
+
+enum QuestionType: String, CaseIterable, Codable {
+    case boolean = "boolean"
+    case multiple = "multiple"
+}

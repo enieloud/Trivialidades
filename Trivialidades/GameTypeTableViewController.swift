@@ -41,8 +41,6 @@ class GameTypeTableViewController: UITableViewController {
                     if succeed {
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameViewControllerID") as! GameViewController
                         self.navigationController!.pushViewController(vc, animated: true)
-//                        vc.modalPresentationStyle = .fullScreen 
-//                        self.present(vc, animated: true)
                     }
                 }
             } else {

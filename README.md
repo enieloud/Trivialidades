@@ -1,5 +1,5 @@
 # Trivialidades
-Ejercicio para iOS
+Ejercicio en iOS. Implementa un trivia basado en (Open Trivia Database)[https://opentdb.com/]
 
 ## Breve Documentación
 

@@ -31,7 +31,8 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "TriviaAnswerViewCell", for: indexPath)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if let g = appDelegate.game {
-            cell.textLabel?.text = g.possibleAnswers[indexPath.row]
+            let text = String(htmlEncodedString: g.possibleAnswers[indexPath.row])
+            cell.textLabel?.text = text
             return cell
         } else {
             cell.textLabel?.text = ""
@@ -45,6 +46,7 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        buttonNext.setTitle("Next", for: .normal)
         bindData()
     }
     
@@ -82,6 +84,9 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
                 }
                 buttonNext.isHidden = false
                 buttonCheck.isHidden = true
+                if g.isFinihed() {
+                    buttonNext.setTitle("View your score", for: .normal)
+                }
             }
         } else {
             buttonNext.isHidden = true

@@ -21,6 +21,7 @@
 		3667BADA2593EB4200AC7632 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BAD92593EB4200AC7632 /* CategoryTableViewController.swift */; };
 		3667BADF2593F18800AC7632 /* DifficultyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BADE2593F18800AC7632 /* DifficultyTableViewController.swift */; };
 		3667BAE42593F96B00AC7632 /* GameTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BAE32593F96B00AC7632 /* GameTypeTableViewController.swift */; };
+		3667BAEC2594CB0C00AC7632 /* FinalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BAEB2594CB0C00AC7632 /* FinalScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3667BAD92593EB4200AC7632 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		3667BADE2593F18800AC7632 /* DifficultyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyTableViewController.swift; sourceTree = "<group>"; };
 		3667BAE32593F96B00AC7632 /* GameTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeTableViewController.swift; sourceTree = "<group>"; };
+		3667BAEB2594CB0C00AC7632 /* FinalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				3667BA832592EB3600AC7632 /* AppDelegate.swift */,
 				3667BA852592EB3600AC7632 /* SceneDelegate.swift */,
 				3667BA892592EB3600AC7632 /* Main.storyboard */,
+				3667BAEB2594CB0C00AC7632 /* FinalScoreViewController.swift */,
 				3667BAE32593F96B00AC7632 /* GameTypeTableViewController.swift */,
 				3667BAD92593EB4200AC7632 /* CategoryTableViewController.swift */,
 				3667BADE2593F18800AC7632 /* DifficultyTableViewController.swift */,
@@ -286,6 +289,7 @@
 			files = (
 				3667BAD52593D4C600AC7632 /* String+HtmlEncoded.swift in Sources */,
 				3667BADF2593F18800AC7632 /* DifficultyTableViewController.swift in Sources */,
+				3667BAEC2594CB0C00AC7632 /* FinalScoreViewController.swift in Sources */,
 				3667BACB2593772E00AC7632 /* Game.swift in Sources */,
 				3667BADA2593EB4200AC7632 /* CategoryTableViewController.swift in Sources */,
 				3667BAC52592FD9A00AC7632 /* Model.swift in Sources */,

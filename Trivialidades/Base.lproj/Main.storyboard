@@ -11,7 +11,7 @@
         <!--Category-->
         <scene sceneID="MwF-YC-eHL">
             <objects>
-                <tableViewController id="HJZ-ql-DZC" customClass="CategoryTableViewController" customModule="Trivialidades" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="CategoryTableViewControllerID" storyboardIdentifier="CategoryTableViewControllerID" id="HJZ-ql-DZC" customClass="CategoryTableViewController" customModule="Trivialidades" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3ft-dA-BVB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,6 +263,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bYg-y6-56H" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="d6J-AN-1VN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oxy-Vp-VjW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -275,6 +276,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8L7-6b-T0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1375.3623188405797" y="796.875"/>
+        </scene>
+        <!--Final Score View Controller-->
+        <scene sceneID="76q-PI-5Zb">
+            <objects>
+                <viewController restorationIdentifier="FinalScoreViewControllerID" storyboardIdentifier="FinalScoreViewControllerID" id="Ly1-xd-mc2" customClass="FinalScoreViewController" customModule="Trivialidades" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oHG-d0-1yg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your final score is 6/10!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dt4-Ug-z6f">
+                                <rect key="frame" x="20" y="388.5" width="374" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="TpZ-fh-Fz6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s7-Np-1zP">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HOc-ox-L8y"/>
+                                </constraints>
+                                <state key="normal" title="Play Again!"/>
+                                <connections>
+                                    <segue destination="bYg-y6-56H" kind="presentation" modalPresentationStyle="fullScreen" id="BgO-j3-6Oc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FZd-Pc-1YQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9s7-Np-1zP" firstAttribute="leading" secondItem="FZd-Pc-1YQ" secondAttribute="leading" constant="20" id="8Om-3z-1ug"/>
+                            <constraint firstItem="FZd-Pc-1YQ" firstAttribute="trailing" secondItem="Dt4-Ug-z6f" secondAttribute="trailing" constant="20" id="Ndh-5g-6Jf"/>
+                            <constraint firstItem="FZd-Pc-1YQ" firstAttribute="trailing" secondItem="9s7-Np-1zP" secondAttribute="trailing" constant="20" id="OBu-lh-oro"/>
+                            <constraint firstItem="Dt4-Ug-z6f" firstAttribute="leading" secondItem="FZd-Pc-1YQ" secondAttribute="leading" constant="20" id="Qt0-I9-hTt"/>
+                            <constraint firstItem="9s7-Np-1zP" firstAttribute="bottom" secondItem="FZd-Pc-1YQ" secondAttribute="bottom" id="Rzr-er-UrB"/>
+                            <constraint firstItem="Dt4-Ug-z6f" firstAttribute="centerY" secondItem="FZd-Pc-1YQ" secondAttribute="centerY" constant="-4.5" id="b0a-ja-sGg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="finalScoreLabel" destination="Dt4-Ug-z6f" id="JBj-CQ-YSY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtR-RS-t89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.7971014492755" y="122.54464285714285"/>
         </scene>
     </scenes>
     <resources>

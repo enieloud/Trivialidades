@@ -93,7 +93,10 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if let g = appDelegate.game {
             if g.isFinihed() {
-                // algo hay que hacer acá
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let finalScoreVC = storyBoard.instantiateViewController(withIdentifier: "FinalScoreViewControllerID") as! FinalScoreViewController
+                finalScoreVC.modalPresentationStyle = .fullScreen
+                self.present(finalScoreVC, animated: true, completion: nil)
             } else {
                 g.next()
             }

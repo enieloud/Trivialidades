@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3667BA842592EB3600AC7632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BA832592EB3600AC7632 /* AppDelegate.swift */; };
 		3667BA862592EB3600AC7632 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BA852592EB3600AC7632 /* SceneDelegate.swift */; };
-		3667BA882592EB3600AC7632 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667BA872592EB3600AC7632 /* ViewController.swift */; };
 		3667BA8B2592EB3600AC7632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3667BA892592EB3600AC7632 /* Main.storyboard */; };
 		3667BA8D2592EB3A00AC7632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3667BA8C2592EB3A00AC7632 /* Assets.xcassets */; };
 		3667BA902592EB3A00AC7632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3667BA8E2592EB3A00AC7632 /* LaunchScreen.storyboard */; };
@@ -45,7 +44,6 @@
 		3667BA802592EB3600AC7632 /* Trivialidades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trivialidades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3667BA832592EB3600AC7632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3667BA852592EB3600AC7632 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3667BA872592EB3600AC7632 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3667BA8A2592EB3600AC7632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3667BA8C2592EB3A00AC7632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3667BA8F2592EB3A00AC7632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			children = (
 				3667BA832592EB3600AC7632 /* AppDelegate.swift */,
 				3667BA852592EB3600AC7632 /* SceneDelegate.swift */,
-				3667BA872592EB3600AC7632 /* ViewController.swift */,
 				3667BA892592EB3600AC7632 /* Main.storyboard */,
 				3667BAE32593F96B00AC7632 /* GameTypeTableViewController.swift */,
 				3667BAD92593EB4200AC7632 /* CategoryTableViewController.swift */,
@@ -287,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3667BA882592EB3600AC7632 /* ViewController.swift in Sources */,
 				3667BAD52593D4C600AC7632 /* String+HtmlEncoded.swift in Sources */,
 				3667BADF2593F18800AC7632 /* DifficultyTableViewController.swift in Sources */,
 				3667BACB2593772E00AC7632 /* Game.swift in Sources */,

@@ -19,8 +19,13 @@ Ejercicio en iOS. Implementa un trivia basado en [Open Trivia Database](https://
 
 ### Screenshots:
 ![Category](/images/Category.png)
+
 ![Difficulty](/images/Difficulty.png)
+
 ![FinalScore](/images/FinalScore.png)
+
 ![GameViewController](/images/GameViewController.png)
+
 ![GameViewControllerAnswer](/images/GameViewControllerAnswer.png)
+
 ![QuestionType](/images/QuestionType.png)

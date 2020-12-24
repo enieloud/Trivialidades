@@ -16,3 +16,11 @@ Ejercicio en iOS. Implementa un trivia basado en [Open Trivia Database](https://
 - **GameTypeTableViewController.swift:** TableViewController que permite elegir tipo (Multiple Choice or Yes/No)
 - **GameViewController.swift:** ViewController que va mostrando las preguntas iterativamente, y lee del model (Game.swift) la pregunta actual, y el score acumulado.
 - **FinalScoreViewController.swift:** Controller que muestra el score final
+
+### Screenshots:
+![Category](/images/Category.png)
+![Difficulty](/images/Difficulty.png)
+![FinalScore](/images/FinalScore.png)
+![GameViewController](/images/GameViewController.png)
+![GameViewControllerAnswer](/images/GameViewControllerAnswer.png)
+![QuestionType](/images/QuestionType.png)

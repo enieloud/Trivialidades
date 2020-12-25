@@ -17,6 +17,7 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
     @IBOutlet weak var feedback: UILabel!
     @IBOutlet weak var buttonCheck: UIButton!
     @IBOutlet weak var buttonNext: UIButton!
+    var showAnswers = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,15 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
         if let g = appDelegate.game {
             let text = String(htmlEncodedString: g.possibleAnswers[indexPath.row])
             cell.textLabel?.text = text
+            if showAnswers {
+                if g.isCorrect(index: indexPath.row) {
+                    cell.backgroundColor = .init(red: 0.7, green: 1.0, blue: 0.7, alpha: 0.5)
+                } else {
+                    cell.backgroundColor = .init(red: 1.0, green: 0.7, blue: 0.7, alpha: 0.5)
+                }
+            } else {
+                cell.backgroundColor = .white
+            }
             return cell
         } else {
             cell.textLabel?.text = ""
@@ -84,6 +94,8 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
                 }
                 buttonNext.isHidden = false
                 buttonCheck.isHidden = true
+                showAnswers = true
+                answers.reloadData()
                 if g.isFinihed() {
                     buttonNext.setTitle("View your score", for: .normal)
                 }
@@ -103,6 +115,7 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
                 finalScoreVC.modalPresentationStyle = .fullScreen
                 self.present(finalScoreVC, animated: true, completion: nil)
             } else {
+                showAnswers = false
                 g.next()
             }
         }

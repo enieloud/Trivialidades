@@ -57,6 +57,16 @@ class Game {
         setupPossibleAnswers()
     }
     
+    func isCorrect(index: Int) -> Bool {
+        if let q = questionsAndAnswers {
+            let answer = self.possibleAnswers[index]
+            let correctAnswer = q.results[currentStep].correctAnswer.uppercased() == answer.uppercased()
+            return correctAnswer
+        } else {
+            return false
+        }
+    }
+
     func evalAnswer(index: Int) -> Bool {
         if let q = questionsAndAnswers {
             let answer = self.possibleAnswers[index]

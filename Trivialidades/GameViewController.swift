@@ -18,6 +18,16 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
     @IBOutlet weak var buttonCheck: UIButton!
     @IBOutlet weak var buttonNext: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        answers.rowHeight = 24
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        buttonNext.setTitle("Next", for: .normal)
+        bindData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if let g = appDelegate.game {
@@ -38,16 +48,6 @@ class GameViewController: UIViewController , UITableViewDelegate, UITableViewDat
             cell.textLabel?.text = ""
         }
         return cell
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        answers.rowHeight = 24
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        buttonNext.setTitle("Next", for: .normal)
-        bindData()
     }
     
     func bindData() {

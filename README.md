@@ -1,6 +1,8 @@
 # Trivialidades
 Ejercicio en iOS. Implementa un trivia basado en [Open Trivia Database](https://opentdb.com/)
 
+<img src="/images/video.gif" alt="video" width="320px;">
+
 ## Breve Documentación
 
 ### Carpeta Model:

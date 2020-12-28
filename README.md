@@ -17,6 +17,11 @@ Ejercicio en iOS. Implementa un trivia basado en [Open Trivia Database](https://
 - **GameViewController.swift:** ViewController que va mostrando las preguntas iterativamente, y lee del model (Game.swift) la pregunta actual, y el score acumulado.
 - **FinalScoreViewController.swift:** Controller que muestra el score final
 
+### Instrucciones:
+- Desde el terminal: 
+  git clone https://github.com/enieloud/Trivialidades
+- Abrir con XCode el proyecto: Trivialidades.xcodeproj
+
 ### Screenshots:
 ![Category](/images/Category.png)
 
